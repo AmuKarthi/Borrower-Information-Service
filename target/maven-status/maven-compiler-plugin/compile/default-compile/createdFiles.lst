@@ -1,0 +1,15 @@
+com\scb\borrower\information\dao\BorrowerInformationDAO.class
+com\scb\borrower\information\payloadrequest\LoanSearchRequestPayload.class
+com\scb\borrower\information\repository\BorrowerInformationRepository.class
+com\scb\borrower\information\util\ApiSubError.class
+com\scb\borrower\information\util\ApiValidationError.class
+com\scb\borrower\information\controller\LoanSearchController.class
+com\scb\borrower\information\serviceImpl\BorrowerInformationServiceImpl.class
+com\scb\borrower\information\repository\LoanInformationRepository.class
+com\scb\borrower\information\service\BorrowerInformationService.class
+com\scb\borrower\information\model\BorrowerInformation.class
+com\scb\borrower\information\BorrowerInformationServiceApplication.class
+com\scb\borrower\information\model\LoanInformation.class
+com\scb\borrower\information\util\RestExceptionHandler.class
+com\scb\borrower\information\util\ApiError.class
+com\scb\borrower\information\util\RecordNotFoundException.class
