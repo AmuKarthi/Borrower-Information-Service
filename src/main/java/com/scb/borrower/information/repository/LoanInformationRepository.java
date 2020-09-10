@@ -14,7 +14,7 @@ import com.scb.borrower.information.model.LoanInformation;
 public interface LoanInformationRepository extends JpaRepository<LoanInformation, Long> {
 
 
-	@Query(value = "select distinct b.*,l.LOAN_NUMBER,l.* "
+	@Query(value = "select distinct b.*,l.* "
 			+ "from borrower_details b, loan_details l "
 			+ "where b.BORROWER_FULL_NAME=:fullName "
 			+ "and l.LOAN_AMOUNT=:loanAmount "
