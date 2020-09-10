@@ -3,6 +3,8 @@ package com.scb.borrower.information.service;
 
 import java.util.List;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.scb.borrower.information.model.LoanInformation;
 
 public interface BorrowerInformationService {
