@@ -17,8 +17,8 @@ public interface LoanInformationRepository extends JpaRepository<LoanInformation
 	@Query(value = "select distinct b.*,l.* "
 			+ "from borrower_details b, loan_details l "
 			+ "where b.BORROWER_FULL_NAME=:fullName "
-			+ "and l.LOAN_AMOUNT=:loanAmount "
-			+ "and l.LOAN_NUMBER=:loanNumber", nativeQuery = true)
+			+ "or l.LOAN_AMOUNT=:loanAmount "
+			+ "or l.LOAN_NUMBER=:loanNumber", nativeQuery = true)
 	List<LoanInformation> filterByConstraints( @Param("fullName") String fullName, 
 			@Param("loanAmount") Long loanAmount,
 			@Param("loanNumber") String loanNumber);
