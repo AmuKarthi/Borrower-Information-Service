@@ -15,7 +15,7 @@ public interface LoanInformationRepository extends JpaRepository<LoanInformation
 
 // new commit
 	@Query(value = "select distinct b.*,l.* "
-			+ "from borrower_details b, loan_details l "
+			+ "from borrower_details b join loan_details l on b.BORROWER_ID = l.BORROWER_ID "
 			+ "where b.BORROWER_FULL_NAME=:fullName "
 			+ "or l.LOAN_AMOUNT=:loanAmount "
 			+ "or l.LOAN_NUMBER=:loanNumber", nativeQuery = true)
