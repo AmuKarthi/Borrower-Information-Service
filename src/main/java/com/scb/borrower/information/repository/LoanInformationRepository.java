@@ -13,12 +13,12 @@ import com.scb.borrower.information.model.LoanInformation;
 @Repository
 public interface LoanInformationRepository extends JpaRepository<LoanInformation, Long> {
 
-
+// new commit
 	@Query(value = "select distinct b.*,l.* "
-			+ "from borrower_details b, loan_details l "
+			+ "from borrower_details b join loan_details l on b.BORROWER_ID = l.BORROWER_ID "
 			+ "where b.BORROWER_FULL_NAME=:fullName "
-			+ "and l.LOAN_AMOUNT=:loanAmount "
-			+ "and l.LOAN_NUMBER=:loanNumber", nativeQuery = true)
+			+ "or l.LOAN_AMOUNT=:loanAmount "
+			+ "or l.LOAN_NUMBER=:loanNumber", nativeQuery = true)
 	List<LoanInformation> filterByConstraints( @Param("fullName") String fullName, 
 			@Param("loanAmount") Long loanAmount,
 			@Param("loanNumber") String loanNumber);
